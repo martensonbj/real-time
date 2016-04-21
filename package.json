@@ -1,0 +1,36 @@
+{
+  "name": "real-time",
+  "version": "1.0.0",
+  "description": "An application demonstrating the use of web sockets and asynchronous JavaScript",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martensonbj/real-time.git"
+  },
+  "keywords": [
+    "web",
+    "sockets",
+    "javascript",
+    "poll",
+    "node"
+  ],
+  "author": "Brenna Martenson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/martensonbj/real-time/issues"
+  },
+  "homepage": "https://github.com/martensonbj/real-time#readme",
+  "dependencies": {
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "socket.io": "^1.4.5"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "request": "^2.72.0"
+  }
+}
