@@ -1,10 +1,13 @@
 <form class="new-poll" action="/new" method="post" name="poll" id="poll-form">
   <fieldset id="poll-inputs">
-    <input class="center" type="text" name="poll[title]" placeholder="TITLE">
-    <input class="center" type="text" name="poll[options][]" placeholder="Poll Option">
-    <input class="center" type="text" name="poll[options][]" placeholder="Poll Option">
-    <input class="center" type="text" name="poll[options][]" placeholder="Poll Option">
+    <input class="center option-field" type="text" name="poll[title]" placeholder="TITLE">
+    <input class="center option-field" type="text" name="poll[options][]" placeholder="Poll Option">
+    <input class="center option-field" type="text" name="poll[options][]" placeholder="Poll Option">
+    <input class="center option-field" type="text" name="poll[options][]" placeholder="Poll Option">
   </fieldset>
-  <div class="btn btn default" onClick="addOption()"><i class="material-icons">add_circle_outline</i>Add Option</div>
+  <div class="btn btn-default" onClick="addOption()">
+    <i class="material-icons">add_circle_outline</i>Add Option</div>
   <input type='submit' class="btn btn-default" id='submit' value='Submit'/>
+  <div class="btn btn-default" onClick="removeOption()">
+    <i class="material-icons">remove_circle_outline</i>Remove Option</div>
 </form>

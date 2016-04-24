@@ -9,7 +9,6 @@ const pollId = path[path.length-1];
 
 socket.on('usersConnected', function (count, users) {
   connectionCount.innerText = 'Connected Users: ' + count;
-  userIds.innerText = 'Users Connected: ' + users
 });
 
 for (var i = 0; i < buttons.length; i++) {
