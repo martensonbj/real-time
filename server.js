@@ -81,7 +81,8 @@ io.on('connection', function (socket) {
     if (channel === `voteCast-${pollId}`) {
       options[vote]++
       io.sockets.emit(`voteCount-${pollId}`, poll);
-      console.log('IN VOTECAST THING WTF');
+    } else if (channel === `closePoll-${pollId}`) {
+      io.sockets.emit(`closePoll-${pollId}`);
     }
 
     app.locals.votes[socket.id] = message.vote
