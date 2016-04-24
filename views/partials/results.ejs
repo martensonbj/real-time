@@ -1,0 +1,10 @@
+<h5>Results: </h5>
+<% var i = 1 %>
+<% for (var option in poll.options) {%>
+  <% if (poll.options.hasOwnProperty(option) && option !== "") {%>
+      <p><%= option %>
+        <span id="<%= poll.pollId %>-<%= i %>">Count: <%= poll.options[option] %></span>
+      </p>
+    <% i++ %>
+  <% } %>
+<% } %>

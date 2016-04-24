@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+    <% include ../partials/head %>
+
+  <body class="container-fluid">
+    <% include ../partials/header %>
+  <main class="center">
+    <h1>Poll: <%= poll.title %></h1>
+    <div id="connection-count"></div>
+    <div id="user-ids"></div>
+
+
+    <% include ./partials/options %>
+  </main>
+    <% include ../partials/footer %>
+    <% include ./partials/scripts %>
+  </body>
+</html>

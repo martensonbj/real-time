@@ -41,4 +41,26 @@ describe ('Server', () => {
     });
   });
 
+  describe('POST /votes', () => {
+
+    beforeEach(() => {
+      app.locals.votes = {};
+    });
+
+    it('should not return 404', (done) => {
+      this.request.post('/votes', (error, response) => {
+        if (error) { done(error); }
+          assert.notEqual(response.statusCode, 404);
+        done();
+        });
+      });
+
+    it('should receive and store data', (done) => {
+      // Our implementation will go here…
+      assert(true);
+      done();
+    });
+
+  });
+
 });

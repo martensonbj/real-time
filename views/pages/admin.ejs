@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <% include ../partials/head %>
+  </head>
+
+  <body class="container-fluid">
+    <% include ../partials/header %>
+
+    <main class="center">
+      <h2>Poll Submitted</h2>
+      <div id="connection-count"></div>
+      <div id="user-ids"></div>
+
+      <h3>Title: <%= poll.title %></h3>
+
+
+      <p><a href='<%= `/${poll.adminId}/${poll.pollId}`%>'>Manage Poll</a></p>
+      <p><a href='<%= `/poll/results/${poll.pollId}` %>'>See Poll & All Results</a></p>
+      <p><a href='<%= `/poll/${poll.pollId}` %>'>Take Poll</a></p>
+    </main>
+
+    <% include ../partials/footer %>
+    <% include ../partials/scripts %>
+  </body>
+
+</html>
