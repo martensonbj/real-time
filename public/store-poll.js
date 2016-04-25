@@ -6,6 +6,7 @@ function StorePoll(pollId, adminId, title, options) {
   this.title = title;
   this.options = options;
   this.votes = {};
+  this.active = true;
 }
 
 module.exports = StorePoll;

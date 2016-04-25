@@ -8,6 +8,7 @@ const path = window.location.pathname.split("/");
 const pollId = path[path.length-1];
 
 socket.on('usersConnected', function (count, users) {
+  checkIfClosed()
   connectionCount.innerText = 'Connected Users: ' + count;
 });
 

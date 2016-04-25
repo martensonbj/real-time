@@ -4,16 +4,12 @@
   <% include ../partials/head %>
 
   <body class="container-fluid">
-    <p>
-      Manage Poll
-    </p>
+
     <% include ../partials/header %>
 
     <main class="center">
       <h1>Poll: <%= poll.title %></h1>
       <div id="connection-count"></div>
-
-      <h1 id="poll-closed-text" class="red"></h1>
 
       <% include ../partials/options %>
       <% include ../partials/results %>

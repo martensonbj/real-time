@@ -6,9 +6,7 @@
   </head>
 
   <body class="container-fluid">
-    <p>
-      Admin Page
-    </p>
+
     <% include ../partials/header %>
 
     <main class="center">
@@ -20,7 +18,7 @@
 
       <p><a href='<%= `/${poll.adminId}/${poll.pollId}`%>'>Manage Poll</a></p>
       <p><a href='<%= `/poll/results/${poll.pollId}` %>'>See Poll & All Results</a></p>
-      <p><a href='<%= `/poll/${poll.pollId}` %>'>Take Poll</a></p>
+      <p><a href='<%= `/poll/private/${poll.pollId}` %>'>Take Poll</a></p>
     </main>
 
     <% include ../partials/footer %>

@@ -57,7 +57,7 @@ app.get('/poll/results/:pollId', function (req, res) {
 });
 
 //show private user voting page
-app.get('/poll/:pollId', function (req, res) {
+app.get('/poll/private/:pollId', function (req, res) {
   var myPoll = app.locals.polls[req.params.pollId];
   res.render('pages/poll', {poll: myPoll});
 });
@@ -75,7 +75,10 @@ io.on('connection', function (socket) {
     if (channel === `voteCast-${pollId}`) {
       options[vote]++
       io.sockets.emit(`voteCount-${pollId}`, poll);
-    } else if (channel === `closePoll-${pollId}`) {
+    }
+
+    if (channel === `closePoll-${pollId}`) {
+      poll.active = false;
       io.sockets.emit(`closePoll-${pollId}`);
     }
 
@@ -88,7 +91,6 @@ io.on('connection', function (socket) {
     io.sockets.emit('usersConnected', io.engine.clientsCount);
   });
 });
-
 
 if (!module.parent) {
   app.listen(app.get('port'), () => {
