@@ -14,12 +14,10 @@ const server =  http.createServer(app)
 
 const socketIo = require('socket.io');
 const io = socketIo(server);
-const locus = require('locus');
 
 app.locals.title = 'Real Time';
 app.locals.votes = {};
 app.locals.polls = {}
-app.locals.users = [];
 
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
