@@ -66,10 +66,6 @@ io.on('connection', function (socket) {
   console.log('A user has connected', io.engine.clientsCount);
   console.log('Socket Id', socket.id);
 
-  app.locals.users.push(socket.id);
-
-  io.sockets.emit('usersConnected', io.engine.clientsCount, app.locals.users);
-
   socket.on('message', function(channel, message) {
     var pollId = message.pollId;
     var poll = app.locals.polls[pollId]
